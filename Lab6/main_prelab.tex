@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Lab6 Prelab}
+\author{Andrew Gibson}
+\date{February 2023}
+
+\begin{document}
+
+\maketitle
+
+\[y\prime \prime (t) + 10y\prime(t) + 24y(t) = x\prime\prime(t) + 6x\prime(t) + 12x(t)\]
+
+\section{task 1}
+By hand, find the transfer function. Assume all initial conditions are zero.
+
+\[y\prime \prime (t) + 10y\prime(t) + 24y(t) = x\prime\prime(t) + 6x\prime(t) + 12x(t)\]
+
+\begin{math}
+\left(s^2 Y(s) -s y(0^{-})-y^{(1)} (0^{-}) \right) + 10 \left(s Y(s) - y(0^{-}) \right) + 24 \left(Y(s) \right)  = \\
+\left(s^2 X(s) -s x(0^{-})-x^{(1)} (0^{-}) \right) + 6\left(s X(s) - x(0^{-}) \right) + 12 \left(X(s) \right) 
+\end{math}
+
+\[\left(s^2 Y(s) \right) + 10 \left(s Y(s) \right) + 24 \left(Y(s) \right) = \left(s^2 X(s) \right) + 6\left(s X(s) \right) + 12 \left(X(s) \right)\]
+
+\[Y(s) \left(s^2 + 10 s  + 24 \right) =  X(s) \left(s^2  + 6 s + 12 \right)\]
+
+\[Y(s)  =  X(s) \frac{\left(s^2  + 6 s + 12 \right)} {\left(s^2 + 10 s  + 24 \right)}\]
+
+\[Y(s)  =  X(s) \left( \frac {-6} {s+6} + \frac {2}{s+4} + 1\right)\]
+
+\[\frac {Y(s)} {X(s)}  =  \left( \frac {-6} {s+6} + \frac {2}{s+4} + 1\right)\]
+
+\[H(s)  =  \left( \frac {-6} {s+6} + \frac {2}{s+4} + 1\right)\]
+
+\[h(t)  =  -6 e^{-6t} u(t) + 2 e^{-4t} u(t)+\delta (t)\]
+
+
+\section{task 2}
+For the system  \textit{H(s)}, find \textit{y(t)} for a step input using partial fraction expansion and inverse
+Laplace transforms. Perform the calculation by hand and type your final answer and other
+significant results.
+
+\[H(s)  =  \left( \frac {-6} {s+6} + \frac {2}{s+4} + 1\right)\]
+
+\[Y(s)  =  \frac {1}{s} \left( \frac {-6} {s+6} + \frac {2}{s+4} + 1\right)\]
+
+
+\[Y(s)  =   \left( \frac {1} {s+6} + \frac {-1/2}{s+4} + \frac{1/2}{s}\right)\]
+
+
+\[y(t)  =   e^{-6t} u(t) - \frac {1}{2} e^{-4t} u(t)+\frac {1}{2} u(t)\]
+
+\end{document}
+ 
